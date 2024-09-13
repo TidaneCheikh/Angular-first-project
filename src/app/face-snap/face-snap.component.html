@@ -1,9 +1,13 @@
+
 <div class="card">
-    <img [src]="image" class="card-image">
+    <img [src]="facesnap.image" class="card-image">
     <div class="card-content">
-        <h2 class="card-title">{{title}}</h2>
+        <h2 class="card-title">{{facesnap.title | uppercase}}</h2>
         <p class="card-description">
-            {{description}}
+            {{facesnap.description}}
         </p>
+        <p>{{facesnap.location}}
+        </p>
+        <p> {{facesnap.date | date : 'd MMMM yyyy, à HH:mm' }}</p>
     </div>
 </div>

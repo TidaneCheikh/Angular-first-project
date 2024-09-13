@@ -1,22 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FaceSnap } from '../models/face-snap-model';
+import {UpperCasePipe ,DatePipe} from '@angular/common';
+
 
 
 
 @Component({
   selector: 'app-face-snap',
   standalone: true,
-  imports: [],
+  imports: [UpperCasePipe,DatePipe],
   templateUrl: './face-snap.component.html',
   styleUrl: './face-snap.component.scss'
 })
 export class FaceSnapComponent {
 
+  @Input() facesnap !: FaceSnap;
 
-  title : string= "cheikh";
-  description : string ="cheikh est un developpeur front backend passionné d'Angular  ";
-  image : string ='ppyang.jpg';
-
-
-
+  
 
 }

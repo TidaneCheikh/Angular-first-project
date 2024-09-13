@@ -1,1 +1,3 @@
-<app-face-snap></app-face-snap>
+@for (item of mysnap; track item.title) {
+  <app-face-snap [facesnap]="item"></app-face-snap>
+}
